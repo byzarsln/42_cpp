@@ -12,7 +12,7 @@ int main(int argc, char **argv)
         std::cout << std::endl;
    }
     else if (argc == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOI SE *" << std::endl;
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
     return 0;
 }
 
