@@ -23,7 +23,10 @@ int main()
                 return 0;
         }
         else if (command == "EXIT")
+        {
+            phoneBook.exit();
             return 0;
+        }
         else
             std::cout << "Invalid command!" << std::endl;
     }
