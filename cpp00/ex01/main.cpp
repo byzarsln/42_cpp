@@ -9,7 +9,7 @@ int main()
     {
         std::cout  << "~PHONEBOOK~" << std::endl;
         std::cout << "Please enter one of the following three commands:\n1)ADD\n2)SEARCH\n3)EXIT" << std::endl;
-        getline(std::cin, command);
+        std::getline(std::cin, command);
         if (std::cin.eof())
             return 0;
         if (command == "ADD")

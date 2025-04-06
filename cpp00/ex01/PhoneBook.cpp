@@ -17,7 +17,7 @@ std::string checkInput(std::string field, int type)
     {
         std::string input;
         std::cout << field << ": ";
-        getline(std::cin, input);
+        std::getline(std::cin, input);
         if (std::cin.eof())
             std::exit(0);
         if (type == 4 && !isDigitCont(input))
@@ -79,10 +79,10 @@ int PhoneBook::search()
         std::cout << "|       Please enter the contact index      |" << std::endl;
 	    std::cout << "+----------+----------+----------+----------+" << std::endl;
         std::string index;
-        getline(std::cin, index);
+        std::getline(std::cin, index);
         if (std::cin.eof())
             return 0;
-        if (!index.empty() && !isDigitCont(index))
+        if (index.empty() || !isDigitCont(index))
         {
             std::cout << "Invalid input! Please enter a valid index." << std::endl;
             continue;
