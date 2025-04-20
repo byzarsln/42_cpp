@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beyarsla <beyarsla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: beyza <beyza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 17:08:44 by beyarsla          #+#    #+#             */
-/*   Updated: 2025/04/20 17:08:46 by beyarsla         ###   ########.fr       */
+/*   Updated: 2025/04/20 23:44:20 by beyza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     Fixed(const Fixed &fixed);
     Fixed(const int fixed);
     Fixed(const float fixed);
-    Fixed &operator=(const Fixed &fixed);
+    Fixed &operator = (const Fixed &fixed);
 
     float toFloat( void ) const;
     int toInt( void ) const;
