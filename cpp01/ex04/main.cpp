@@ -47,7 +47,7 @@ int main(int ac, char **av)
 		std::cout << "Error: Output file could not be open." << std::endl;
 		return 1;
 	}
-	while (getline(input,line))
+	while (std::getline(input,line))
 	{
 		pos = 0;
 		while ((pos = line.find(s1, pos)) != std::string::npos)
