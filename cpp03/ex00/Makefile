@@ -1,5 +1,5 @@
-NAME = HarlFilter
-SRC = main.cpp Harl.cpp
+NAME = ClapTrap
+SRC = main.cpp ClapTrap.cpp
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

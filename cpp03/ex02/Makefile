@@ -1,5 +1,5 @@
-NAME = HarlFilter
-SRC = main.cpp Harl.cpp
+NAME = FragTrap
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
