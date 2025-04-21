@@ -1,17 +1,20 @@
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-# include "ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
-{	
-public:
-	FragTrap();
-	~FragTrap();
-	FragTrap(const std::string &name);
-	FragTrap(const FragTrap &fragTrap);
-	FragTrap& operator=(const FragTrap &fragTrap);
-	void highFivesGuys(void);
+{
+    private:
+
+    public:
+        FragTrap();
+        FragTrap(std::string nm);
+        FragTrap(const FragTrap& other);
+        FragTrap& operator = (const FragTrap& other);
+        ~FragTrap();
+        void highFivesGuys(void);
+
 };
 
 #endif
