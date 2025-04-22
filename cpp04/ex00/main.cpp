@@ -27,7 +27,7 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "-------------------------" << std::endl;
+    std::cout << "----------------------------------" << std::endl;
     std::cout << std::endl;
     
     {
@@ -36,8 +36,8 @@ int main()
     
         std::cout << std::endl;
     
-        std::cout << "Wrong Animal Type -> " << meta->getType() << std::endl;
-		std::cout << "Wrong Cat Type-> " << cat->getType() << std::endl;
+        std::cout << meta->getType() << " " << std::endl;
+        std::cout << cat->getType() << " " << std::endl;
     
         std::cout << std::endl;
     

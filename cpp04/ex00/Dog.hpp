@@ -2,7 +2,6 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
-#include <iostream>
 
 class Dog : public Animal
 {
@@ -11,8 +10,7 @@ class Dog : public Animal
         Dog(const Dog& other);
         Dog& operator=(const Dog& other);
         ~Dog();
-
-        void makeSound() const;
+        void makeSound()const;
 };
 
 #endif
