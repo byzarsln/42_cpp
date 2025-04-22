@@ -1,53 +1,53 @@
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog()
 {
-	this->type = "Dog";
-	brain = new Brain();
-	std::cout << "Dog Default Constructor called! 🐶" << std::endl;
+    std::cout << "Dog default constructor called 🐶" << std::endl;
+    this->type = "Dog";
+    this->brain = new Brain();
+}
+
+Dog::Dog(const Dog& other) : Animal(other)
+{
+    std::cout << "Dog copy constructor called! 🐶" << std::endl;
+    brain = new Brain(*other.brain);
+    this->type = other.type;
+}
+
+Dog& Dog::operator=(const Dog& other)
+{
+    std::cout << "Dog copy assignment operator has been called! 🐶" << std::endl;
+    if(this != &other)
+    {
+        delete brain;
+        this->type = other.type;
+        brain = new Brain(*other.brain);
+    }
+    return *this;
 }
 
 Dog::~Dog()
 {
-	delete this->brain;
-	std::cout << "Dog Destructor called! 🐶" << std::endl;
-}
-
-Dog::Dog(const Dog &copy) : Animal(copy)
-{
-	this->type = copy.type;
-	this->brain = new Brain(*copy.brain);
-	std::cout << "Dog Copy Constructor called! 🐶" << std::endl;
-}
-
-Dog &Dog::operator = (const Dog &copy)
-{
-	if (this != &copy)
-	{
-		this->type = copy.type;
-		delete this->brain;
-		this->brain = new Brain(*copy.brain);
-	}
-	std::cout << "Dog assigment operator has been called! 🐶" << std::endl;
-	return *this;
+    delete brain;
+    std::cout << "Dog has been destroyed! 🐶" << std::endl;
 }
 
 void Dog::makeSound() const
 {
-	std::cout << "Woof Woof! 🐶" << std::endl;
+    std::cout << "Woof Wooff! 🐶" << std::endl;
 }
 
-void Dog::setDogIdea(std::string str)
+void Dog::printBrainAdresses()
 {
-	brain->setAllIdeas(str);
+    std::cout << this->brain << std::endl;
 }
 
-void Dog::printNidea(int i)
+void Dog::setDogIdeas(std::string ideas)
 {
-	this->brain->printNidea(i);
+    this->brain->setIdeas(ideas);
 }
 
-void Dog::printBrainAddress()
+void Dog::printDogIdeas(int i)
 {
-	std::cout << this->brain << std::endl;
+   this->brain->printBrainIdeas(i);
 }

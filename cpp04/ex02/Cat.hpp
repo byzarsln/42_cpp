@@ -1,7 +1,8 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Animal.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -9,14 +10,14 @@ class Cat : public Animal
         Brain *brain;
     public:
         Cat();
+        Cat(const Cat& other);
+        Cat& operator=(const Cat& other);
         ~Cat();
-        Cat(const Cat &copy);
-        Cat &operator = (const Cat &copy);
 
-        virtual void makeSound() const;
-        void setCatIdea(std::string str);
-        void printIdea(int i);
-        void printBrainAddress();
+        void printBrainAdresses();
+        void makeSound() const;
+        void setCatIdeas(std::string ideas);
+        void printCatIdeas(int i);
 };
 
 #endif
