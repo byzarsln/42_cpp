@@ -6,7 +6,7 @@
 int main()
 {
     {
-        std::cout << "🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶" << std::endl;
+        std::cout << "🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶" << std::endl;
 
         Dog* j = new Dog();
         Dog* copyJ = new Dog(*j);
@@ -15,18 +15,18 @@ int main()
     
         std::cout << j->getType() << " " << std::endl;
         j->makeSound();
-        j->setDogIdea("Ball Ball Ball");
+        j->setDogIdeas("Ball Ball Ball");
 
         std::cout << "What is dog thinking?" << std::endl;
-        j->printNidea(2);
+        j->printDogIdeas(2);
         std::cout << std::endl;
 
 
         std::cout << "Original Dog Brain:" << std::endl;
-        j->printBrainAddress();
+        j->printBrainAdresses();
 
         std::cout << "Copy Dog Brain:" << std::endl;
-        copyJ->printBrainAddress();
+        copyJ->printBrainAdresses();
 
         std::cout << std::endl;
         delete j;
@@ -34,11 +34,11 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "----------------------------------" << std::endl;
+    std::cout << "---------------------------------" << std::endl;
     std::cout << std::endl;
 
     {
-        std::cout << "😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻" << std::endl;
+        std::cout << "😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻" << std::endl;
         Cat* i = new Cat();
         Cat* copyI = new Cat(*i);
 
@@ -47,18 +47,18 @@ int main()
 
         std::cout << i->getType() << " " << std::endl;
         i->makeSound();
-        i->setCatIdea("Fish Fish Fish");
+        i->setCatIdeas("Fish Fish Fish");
 
         std::cout << "What is cat thinking?" << std::endl;
-        i->printIdea(2);
+        i->printCatIdeas(2);
         std::cout << std::endl;
 
 
         std::cout << "Original Cat Brain:" << std::endl;
-        i->printBrainAddress();
+        i->printBrainAdresses();
 
         std::cout << "Copy Cat Brain:" << std::endl;
-        copyI->printBrainAddress();
+        copyI->printBrainAdresses();
 
         std::cout << std::endl;
         delete copyI;
@@ -66,7 +66,7 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "----------------------------" << std::endl;
+    std::cout << "--------------------------------------" << std::endl;
     std::cout << std::endl;
     
     {

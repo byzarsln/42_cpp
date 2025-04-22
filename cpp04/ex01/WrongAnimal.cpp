@@ -2,35 +2,37 @@
 
 WrongAnimal::WrongAnimal()
 {
-	this->type = "Undefined";
-	std::cout << "Wrong Animal Default Constructor called! 🐔" << std::endl;
+    this->type = "Wrong Animal";
+    std::cout << "WrongAnimal default constructor called! 🐔" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copy)
+WrongAnimal::WrongAnimal(const WrongAnimal& other)
 {
-	*this = copy;
-	std::cout << "Wrong Animal Copy Constructor called! 🐔" << std::endl;
+    *this = other;
+    std::cout << "Wrong Animal copy constructor called! 🐔" << std::endl;
+}
+
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
+{
+    std::cout << "Wrong Animal copy assignment operator has been called! 🐔" << std::endl;
+    if(this != &other)
+    {
+        this->type = other.type;
+    }
+    return *this;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Wrong Animal Destructor called! 🐔" << std::endl;
-}
-
-WrongAnimal &WrongAnimal::operator = (const WrongAnimal &copy)
-{
-	if (this != &copy)
-		this->type = copy.type;
-	std::cout << "Wrong Animal assigment operator has been called! 🐔" << std::endl;
-	return *this;
+    std::cout << "Wrong Animal has been destroyed! 🐔" << std::endl;
 }
 
 std::string WrongAnimal::getType() const
 {
-	return this->type;
+    return this->type;
 }
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "Wrong Animals make sound! 🐔" << std::endl;
+    std::cout << "Wrong Animal make sound! 🐔" << std::endl;
 }

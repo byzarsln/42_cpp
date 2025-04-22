@@ -2,7 +2,7 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
-#include <iostream>
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -10,14 +10,14 @@ class Cat : public Animal
         Brain *brain;
     public:
         Cat();
-        ~Cat();
         Cat(const Cat& other);
         Cat& operator=(const Cat& other);
+        ~Cat();
 
-        virtual void makeSound() const;
-        void setCatIdea(std::string idea);
-        void printIdea(int i);
-        void printBrainAddress();
+        void printBrainAdresses();
+        void makeSound() const;
+        void setCatIdeas(std::string ideas);
+        void printCatIdeas(int i);
 };
 
 #endif
