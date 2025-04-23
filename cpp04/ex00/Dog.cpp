@@ -1,31 +1,31 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
-    std::cout << "Dog default constructor called 🐶" << std::endl;
-    this->type = "Dog";
-}
-
-Dog::Dog(const Dog& other) : Animal(other)
-{
-    *this = other;
-    std::cout << "Dog copy constructor called! 🐶" << std::endl;
-}
-
-Dog& Dog::operator=(const Dog& other)
-{
-    std::cout << "Dog copy assignment operator has been called! 🐶" << std::endl;
-    if(this != &other)
-        Animal::operator=(other);
-    return *this;
+	this->type = "Dog";
+	std::cout << "Dog Default Constructor called!🐶" << std::endl;
 }
 
 Dog::~Dog()
 {
-    std::cout << "Dog has been destroyed! 🐶" << std::endl;
+	std::cout << "Dog Destructor called!🐶" << std::endl;
+}
+
+Dog::Dog(const Dog &copy) : Animal(copy)
+{
+	*this = copy;
+	std::cout << "Dog Copy Constructor called!🐶" << std::endl;
+}
+
+Dog &Dog::operator = (const Dog &copy)
+{
+	if (this != &copy)
+		this->type = copy.type;
+	std::cout << "Dog assigment operator has been called!🐶" << std::endl;
+	return *this;
 }
 
 void Dog::makeSound() const
 {
-    std::cout << "Woof Wooff! 🐶" << std::endl;
+	std::cout << "Woof Wooff..🐶" << std::endl;
 }

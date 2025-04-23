@@ -1,53 +1,53 @@
 #include "Cat.hpp"
 
-Cat::Cat() 
+Cat::Cat() : Animal()
 {
-    std::cout << "Cat default constructor called! 😻" << std::endl;
-    this->type = "Cat";
-    this->brain = new Brain();
-}
-
-Cat::Cat(const Cat& other) : Animal(other)
-{
-    std::cout << "Cat copy constructor called! 😻" << std::endl;
-    brain = new Brain(*other.brain);
-    this->type = other.type;
-}
-
-Cat& Cat::operator=(const Cat& other)
-{
-    std::cout << "Cat copy assignment operator has been called! 😻" << std::endl;
-    if(this != &other)
-    {
-        delete brain;
-        this->type = other.type;
-        brain = new Brain(*other.brain);
-    }
-    return *this;
+	this->type = "Cat";
+	this->brain = new Brain();
+	std::cout << "Cat Default Constructor called!😻" << std::endl;
 }
 
 Cat::~Cat()
 {
-    delete brain;
-    std::cout << "Cat has been destroyed! 😻" << std::endl;
+	delete this->brain;
+	std::cout << "Cat Destructor called!😻" << std::endl;
+}
+
+Cat::Cat(const Cat &copy) : Animal(copy)
+{
+	this->brain = new Brain(*copy.brain);
+	this->type = copy.type;
+	std::cout << "Cat Copy Constructor called!😻" << std::endl;
+}
+
+Cat &Cat::operator = (const Cat &copy)
+{
+	if (this != &copy)
+	{
+		this->type = copy.type;
+		delete this->brain;
+		this->brain = new Brain(*copy.brain);
+	}
+	std::cout << "Cat assigment operator has been called!😻" << std::endl;
+	return *this;
 }
 
 void Cat::makeSound() const
 {
-    std::cout << "Meow Meoww! 😻" << std::endl;
+	std::cout << "Meeooww..😻" << std::endl;
 }
 
-void Cat::printBrainAdresses()
+void Cat::setCatIdea(std::string str)
 {
-    std::cout << this->brain << std::endl;
+	brain->setAllIdeas(str);
 }
 
-void Cat::setCatIdeas(std::string ideas)
+void Cat::printIdea(int i)
 {
-    this->brain->setIdeas(ideas);
+	this->brain->printNidea(i);
 }
 
-void Cat::printCatIdeas(int i)
+void Cat::printBrainAddress()
 {
-   this->brain->printBrainIdeas(i);
+	std::cout << this->brain << std::endl;
 }

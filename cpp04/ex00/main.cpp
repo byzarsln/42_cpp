@@ -16,8 +16,8 @@ int main()
     
         std::cout << std::endl;
     
-        j->makeSound();
         i->makeSound();
+        j->makeSound();
         meta->makeSound();
     
         std::cout << std::endl;
@@ -27,7 +27,7 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "----------------------------------" << std::endl;
+    std::cout << "-------------------------------------" << std::endl;
     std::cout << std::endl;
     
     {

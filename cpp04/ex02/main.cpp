@@ -15,18 +15,18 @@ int main()
     
         std::cout << j->getType() << " " << std::endl;
         j->makeSound();
-        j->setDogIdeas("Ball Ball Ball");
+        j->setDogIdea("Ball Ball Ball");
 
         std::cout << "What is dog thinking?" << std::endl;
-        j->printDogIdeas(2);
+        j->printNidea(2);
         std::cout << std::endl;
 
 
         std::cout << "Original Dog Brain:" << std::endl;
-        j->printBrainAdresses();
+        j->printBrainAddress();
 
         std::cout << "Copy Dog Brain:" << std::endl;
-        copyJ->printBrainAdresses();
+        copyJ->printBrainAddress();
 
         std::cout << std::endl;
         delete j;
@@ -34,11 +34,11 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "------------------------------------" << std::endl;
+    std::cout << "----------------------------------" << std::endl;
     std::cout << std::endl;
 
     {
-        std::cout << "😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻" << std::endl;
+        std::cout << "😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻😻" << std::endl;
         Cat* i = new Cat();
         Cat* copyI = new Cat(*i);
 
@@ -53,18 +53,18 @@ int main()
 
         std::cout << std::endl;
 
-        i->setCatIdeas("Fish Fish Fish");
+        i->setCatIdea("Fish Fish Fish");
 
         std::cout << "What is cat thinking?" << std::endl;
-        i->printCatIdeas(2);
+        i->printIdea(2);
         std::cout << std::endl;
 
 
         std::cout << "Original Cat Brain:" << std::endl;
-        i->printBrainAdresses();
+        i->printBrainAddress();
 
         std::cout << "Copy Cat Brain:" << std::endl;
-        copyI->printBrainAdresses();
+        copyI->printBrainAddress();
 
         std::cout << std::endl;
         delete copyI;
@@ -72,7 +72,7 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "-------------------------------------" << std::endl;
+    std::cout << "-----------------------------------" << std::endl;
     std::cout << std::endl;
     
     {

@@ -2,37 +2,30 @@
 
 Animal::Animal()
 {
-    this->type = "Undefined";
-    std::cout << "Animal default constructor called! " << std::endl;
-}
-
-Animal::Animal(const Animal& other)
-{
-    *this = other;
-    std::cout << "Animal copy constructor called! " << std::endl;
-}
-
-Animal& Animal::operator=(const Animal& other)
-{
-    std::cout << "Animal copy assignment operator has been called! " << std::endl;
-    if(this != &other)
-    {
-        this->type = other.type;
-    }
-    return *this;
+	this->type = "Undefined";
+	std::cout << "Animal Default Constructor called!" << std::endl;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal has been destroyed! " << std::endl;
+	std::cout << "Animal Destructor called!" << std::endl;
+}
+
+Animal::Animal(const Animal &copy)
+{
+	*this = copy;
+	std::cout << "Animal Copy Constructor called!" << std::endl;
+}
+
+Animal &Animal::operator = (const Animal &copy)
+{
+	if (this != &copy)
+		this->type = copy.type;
+	std::cout << "Animal assigment operator has been called!" << std::endl;
+	return *this;
 }
 
 std::string Animal::getType() const
 {
-    return this->type;
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "just animal voice! " << std::endl;
+	return this->type;
 }
